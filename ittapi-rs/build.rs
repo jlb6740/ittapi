@@ -5,10 +5,6 @@ use std::env;
 use std::path::PathBuf;
 extern crate bindgen;
 
-#[cfg(target_os = "windows")]
-fn main() {}
-
-#[cfg(not(target_os = "windows"))]
 fn main() {
     let out_dir = env::var("OUT_DIR").unwrap();
     let out_path = PathBuf::from(out_dir);
